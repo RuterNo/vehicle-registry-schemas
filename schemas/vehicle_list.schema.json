@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "vehicle_list.schema.json",
+  "version": "0.8.0",
+  "title": "Vehicle List",
+  "description": "A list of the vehicles in this database",
+  "required": [
+    "vehicles"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "Vehicles": {
+      "$id": "#/properties/Vehicles",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$id": "#/properties/Vehicles/items",
+        "type": "object",
+        "$ref": "vehicle.schema.json"
+      }
+    }
+  }
+}

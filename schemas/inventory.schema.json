@@ -1,0 +1,35 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "inventory.schema.json",
+  "version": "0.8.0",
+  "type": "object",
+  "title": "Inventory",
+  "required": [
+    "ID",
+    "Modules"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "ID": {
+      "$id": "#/properties/ID",
+      "type": "string",
+      "title": "Id",
+      "description": "The ID of the corresponding vehicle",
+      "examples": [
+        "TODO"
+      ],
+    },
+    "Modules": {
+      "$id": "#/properties/Modules",
+      "type": "array",
+      "title": "Modules",
+      "uniqueItems": true,
+      "items": {
+        "$id": "#/properties/Modules/items",
+        "type": "object",
+        "$ref": "equipment.schema.json"
+      }
+    }
+  }
+}

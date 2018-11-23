@@ -1,0 +1,285 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "vehicle.schema.json",
+  "version": "0.8.0",
+  "type": "object",
+  "title": "Vehicle",
+  "description": "A vehicle in the vehicle registry",
+  "required": [
+    "UID",
+    "ID",
+    "GatewayIP",
+    "Operator",
+    "Prefix",
+    "Description",
+    "Length",
+    "TotalCapacity",
+    "SeatingCapacity",
+    "StandingCapacity",
+    "SpecialPlaceCapacity",
+    "WheelchairPlaceCapacity",
+    "LowFloor",
+    "HasLiftOrRamp",
+    "Manufacturer",
+    "Model",
+    "Type",
+    "TransportType",
+    "TypeOfBus",
+    "Year",
+    "Color",
+    "DoorSetup",
+    "EnvironmentClass",
+    "UpdateDate"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "UID": {
+      "$id": "#/properties/UID",
+      "type": "string",
+      "title": "Unique Identifier",
+      "description": "A globally unique id for this vehicle created by Ruter",
+      "examples": [
+        "TODO: not yet defined"
+      ]
+    },
+    "ID": {
+      "$id": "#/properties/ID",
+      "type": "string",
+      "title": "Identifier",
+      "description": "The operator's internal identifier",
+      "examples": [
+        "22011"
+      ]
+    },
+    "GatewayIP": {
+      "$id": "#/properties/GatewayIP",
+      "type": "string",
+      "title": "GatewayIP",
+      "description": "The vehicle's gateway ip address",
+      "examples": [
+        "10.0.0.1"
+      ]
+    },
+    "Operator": {
+      "$id": "#/properties/Operator",
+      "type": "string",
+      "title": "Operator",
+      "description": "The name of the operator",
+      "examples": [
+        "Nobina",
+        "Nettbuss",
+        "Unibuss",
+        "Norgesbuss"
+      ]
+    },
+    "Prefix": {
+      "$id": "#/properties/Prefix",
+      "type": "integer",
+      "title": "Prefix",
+      "description": "TODO: The depot number?",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "Description": {
+      "$id": "#/properties/Description",
+      "type": "string",
+      "title": "Description",
+      "description": "A description of the vehicle",
+      "examples": [
+        "TODO",
+        "Bi-Articulated Bus"
+      ]
+    },
+    "Length": {
+      "$id": "#/properties/Length",
+      "type": "number",
+      "title": "Length",
+      "description": "The Length of the vehicle in meters (decimal number)",
+      "default": 0.0,
+      "exclusiveMinimum": 0.0,
+      "examples": [
+        12.33,
+        12
+      ]
+    },
+    "TotalCapacity": {
+      "$id": "#/properties/TotalCapacity",
+      "type": "integer",
+      "title": "Total Capacity",
+      "description": "The total passenger capacity of the vehicle (whole number)",
+      "default": 0,
+      "exclusiveMinimum": 0,
+      "examples": [
+        62
+      ]
+    },
+    "SeatingCapacity": {
+      "$id": "#/properties/SeatingCapacity",
+      "type": "integer",
+      "title": "Seating Capacity",
+      "description": "The seating passenger capacity of the vehicle (whole number)",
+      "default": 0,
+      "exclusiveMinimum": 0,
+      "examples": [
+        43
+      ]
+    },
+    "StandingCapacity": {
+      "$id": "#/properties/StandingCapacity",
+      "type": "integer",
+      "title": "Standing Capacity",
+      "description": "The standing passenger capacity of the vehicle (whole number)",
+      "default": 0,
+      "exclusiveMinimum": 0,
+      "examples": [
+        19
+      ]
+    },
+    "SpecialPlaceCapacity": {
+      "$id": "#/properties/SpecialPlaceCapacity",
+      "type": "integer",
+      "title": "Special Place Capacity",
+      "description": "The number of special places in the vehicle (whole number)",
+      "default": 0,
+      "minimum": 0,
+      "examples": [
+        1
+      ]
+    },
+    "WheelchairPlaceCapacity": {
+      "$id": "#/properties/WheelchairPlaceCapacity",
+      "type": "integer",
+      "title": "Wheelchair Place Capacity",
+      "description": "The wheel chair places passenger capacity of the vehicle (whole number)",
+      "default": 0,
+      "minimum": 0,
+      "examples": [
+        1
+      ]
+    },
+    "LowFloor": {
+      "$id": "#/properties/LowFloor",
+      "type": "boolean",
+      "title": "Low Floor",
+      "description": "Whether the vehicle has a low floor",
+      "default": false,
+      "examples": [
+        false,
+        true
+      ]
+    },
+    "HasLiftOrRamp": {
+      "$id": "#/properties/HasLiftOrRamp",
+      "type": "boolean",
+      "title": "Has Lift Or Ramp",
+      "description": "Whether the vehicle has a lift or a ramp",
+      "default": false,
+      "examples": [
+        false,
+        true
+      ]
+    },
+    "Manufacturer": {
+      "$id": "#/properties/Manufacturer",
+      "type": "string",
+      "title": "Manufacturer",
+      "description": "The name of the vehicle's manufacturer",
+      "examples": [
+        "Volvo"
+      ]
+    },
+    "Model": {
+      "$id": "#/properties/Model",
+      "type": "string",
+      "title": "Model",
+      "description": "The model of the vehicle",
+      "examples": [
+        "B8L"
+      ]
+    },
+    "Type": {
+      "$id": "#/properties/Type",
+      "type": "string",
+      "title": "Type",
+      "description": "The type of the vehicle",
+      "examples": [
+        "TODO"
+      ]
+    },
+    "TransportType": {
+      "$id": "#/properties/TransportType",
+      "type": "string",
+      "title": "Transport Type",
+      "description": "The type of transport",
+      "examples": [
+        "TODO",
+        "Bus",
+        "Tram",
+        "Metro"
+      ]
+    },
+    "TypeOfBus": {
+      "$id": "#/properties/TypeOfBus",
+      "type": "string",
+      "title": "Type Of Bus",
+      "description": "",
+      "examples": [
+        "TODO",
+        "NE",
+        "BE",
+        "LE"
+      ]
+    },
+    "Year": {
+      "$id": "#/properties/Year",
+      "type": "integer",
+      "title": "Year",
+      "default": 1900,
+      "description": "The model year",
+      "exclusiveMinimum": 1900,
+      "exclusiveMaximum": 2100,
+      "examples": [
+        2018
+      ]
+    },
+    "Color": {
+      "$id": "#/properties/Color",
+      "type": "string",
+      "title": "Color",
+      "examples": [
+        "RAL 1016"
+      ]
+    },
+    "DoorSetup": {
+      "$id": "#/properties/DoorSetup",
+      "type": "string",
+      "title": "Door Setup",
+      "description": "The door setup",
+      "examples": [
+        "1-2-0"
+      ]
+    },
+    "EnvironmentClass": {
+      "$id": "#/properties/EnvironmentClass",
+      "type": "string",
+      "title": "Environment Class",
+      "description": "Euro class",
+      "examples": [
+        "6",
+        "5"
+      ]
+    },
+    "UpdateDate": {
+      "$id": "#/properties/UpdateDate",
+      "type": "string",
+      "format": "date-time",
+      "description": "The last time this information was updated (ISO 8601 UTC)",
+      "examples": [
+        "2018-10-30T13:43:52.320Z"
+      ]
+    }
+  }
+}

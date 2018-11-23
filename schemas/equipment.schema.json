@@ -1,0 +1,107 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "equipment.schema.json",
+  "version": "0.8.0",
+  "type": "object",
+  "title": "Equipment",
+  "description": "The equipment schema",
+  "required": [
+    "Type",
+    "Model",
+    "Manufacturer",
+    "SerialNumber",
+    "SoftwareVersion",
+    "HardwareVersion",
+    "Status",
+    "UpdateDate"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "Type": {
+      "$id": "#properties/Type",
+      "type": "string",
+      "title": "Type",
+      "description": "The type of equipment",
+      "examples": [
+        "VCG",
+        "AVMS",
+        "GNSS"
+      ]
+    },
+    "Model": {
+      "$id": "#properties/Model",
+      "type": "string",
+      "title": "Model",
+      "description": "The model of the equipment",
+    },
+    "Manufacturer": {
+      "$id": "#properties/Manufacturer",
+      "type": "string",
+      "title": "Manufacturer",
+      "description": "The name of the manufacturer",
+      "examples": [
+        "Fältcom",
+        "Pilotfish"
+      ]
+    },
+    "SerialNumber": {
+      "$id": "#properties/SerialNumber",
+      "type": "string",
+      "title": "Serial Number",
+    },
+    "SoftwareVersion": {
+      "$id": "#properties/SoftwareVersion",
+      "type": "string",
+      "title": "Software Version",
+      "examples": [
+        "1.2.3"
+      ]
+    },
+    "HardwareVersion": {
+      "$id": "#properties/HardwareVersion",
+      "type": "string",
+      "title": "Hardware Version",
+      "examples": [
+        "1.2.3"
+      ]
+    },
+    "MACAddress": {
+      "$id": "#properties/MACAddress",
+      "type": "string",
+      "title": "MACAddress",
+      "examples": [
+        "CF:DA:98:63:9D:F6"
+      ]
+    },
+    "Status": {
+      "$id": "#properties/Status",
+      "type": "integer",
+      "title": "Status",
+      "description": "Status numbers as defined by ITxPT",
+      "examples": [
+        0
+      ]
+    },
+    "UpdateDate": {
+      "$id": "#/properties/UpdateDate",
+      "type": "string",
+      "description": "The last time this information was updated (ISO 8601 UTC)",
+      "examples": [
+        "2018-10-30T13:43:52.320Z"
+      ],
+      "format": "date-time"
+    },
+    "SubModules": {
+      "$id": "#properties/SubModules",
+      "type": "array",
+      "title": "Submodules",
+      "items": {
+        "$id": "#properties/SubModules/items",
+        "type": "object",
+        "title": "Item",
+        "$ref": "equipment.schema.json"
+      }
+    }
+  }
+}
