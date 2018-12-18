@@ -1,0 +1,4 @@
+allprojects {
+    group = 'no.ruter.taas.ver'
+    version = '0.8.1'
+}

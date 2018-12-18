@@ -1,0 +1,30 @@
+{
+  "ID": "NOB_3",
+  "Modules": [
+    {
+      "Type": "TypeType",
+      "Model": "Model",
+      "Manufacturer": "Manufacturer",
+      "SerialNumber": "Eq2",
+      "SoftwareVersion": "SoftwareVersion",
+      "HardwareVersion": "HardwareVersion",
+      "MACAddress": "MACAddress",
+      "Status": 1,
+      "UpdateDate": "2018-12-11T16:20:29.155Z",
+      "SubModules": [
+        {
+          "Type": "Type",
+          "Model": "Model",
+          "Manufacturer": "Manufacturer",
+          "SerialNumber": "SubEq1",
+          "SoftwareVersion": "SoftwareVersion",
+          "HardwareVersion": "HardwareVersion",
+          "MACAddress": "MACAddress",
+          "Status": 0,
+          "UpdateDate": "2018-12-11T16:20:29.155Z",
+          "SubModules": []
+        }
+      ]
+    }
+  ]
+}

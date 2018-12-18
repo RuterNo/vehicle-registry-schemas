@@ -2,12 +2,12 @@
   "definitions": {},
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "vehicle.schema.json",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "type": "object",
   "title": "Vehicle",
   "description": "A vehicle in the vehicle registry",
   "required": [
-    "UID",
+    "VIN",
     "ID",
     "GatewayIP",
     "Operator",
@@ -40,7 +40,19 @@
       "title": "Unique Identifier",
       "description": "A globally unique id for this vehicle created by Ruter",
       "examples": [
-        "TODO: not yet defined"
+        "TODO"
+      ]
+    },
+    "VIN": {
+      "$id": "#/properties/VIN",
+      "type": "string",
+      "title": "Chassis Number",
+      "description": "The chassis number of the vehicle",
+      "examples": [
+        "YV3R8N12191134148",
+        "SUU206U11DB012358",
+        "VNESFR1600M006849",
+        "WEB62868713121311"
       ]
     },
     "ID": {

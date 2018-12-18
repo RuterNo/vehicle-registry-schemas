@@ -2,7 +2,7 @@
   "definitions": {},
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "inventory.schema.json",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "type": "object",
   "title": "Inventory",
   "required": [
@@ -18,7 +18,7 @@
       "description": "The ID of the corresponding vehicle",
       "examples": [
         "TODO"
-      ],
+      ]
     },
     "Modules": {
       "$id": "#/properties/Modules",

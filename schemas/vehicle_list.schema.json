@@ -1,11 +1,11 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "vehicle_list.schema.json",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "title": "Vehicle List",
   "description": "A list of the vehicles in this database",
   "required": [
-    "vehicles"
+    "Vehicles"
   ],
   "additionalProperties": false,
   "properties": {

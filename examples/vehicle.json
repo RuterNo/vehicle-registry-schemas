@@ -1,9 +1,10 @@
 {
   "UID": "TODO",
+  "VIN": "YV3R8N1279A134235",
   "ID": "22011",
   "GatewayIP": "10.0.0.1",
   "Operator": "Nobina",
-  "Prefix": 0,
+  "Prefix": 33,
   "Description": "Bi-Articulated Bus",
   "Length": 12.33,
   "TotalCapacity": 62,
