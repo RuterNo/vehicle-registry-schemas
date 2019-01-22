@@ -2,7 +2,7 @@
   "definitions": {},
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "vehicle.schema.json",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "type": "object",
   "title": "Vehicle",
   "description": "A vehicle in the vehicle registry",
@@ -38,16 +38,15 @@
       "$id": "#/properties/UID",
       "type": "string",
       "title": "Unique Identifier",
-      "description": "A globally unique id for this vehicle created by Ruter",
-      "examples": [
-        "TODO"
-      ]
+      "description": "A globally unique id for this vehicle created by Ruter"
     },
     "VIN": {
       "$id": "#/properties/VIN",
       "type": "string",
       "title": "Chassis Number",
       "description": "The chassis number of the vehicle",
+      "maxLength": 17,
+      "minLength": 17,
       "examples": [
         "YV3R8N12191134148",
         "SUU206U11DB012358",
@@ -91,6 +90,7 @@
       "title": "Prefix",
       "description": "TODO: The depot number?",
       "default": 0,
+      "minimum": 0,
       "examples": [
         0
       ]
@@ -111,7 +111,7 @@
       "title": "Length",
       "description": "The Length of the vehicle in meters (decimal number)",
       "default": 0.0,
-      "exclusiveMinimum": 0.0,
+      "minimum": 0.0,
       "examples": [
         12.33,
         12
@@ -123,7 +123,7 @@
       "title": "Total Capacity",
       "description": "The total passenger capacity of the vehicle (whole number)",
       "default": 0,
-      "exclusiveMinimum": 0,
+      "minimum": 0,
       "examples": [
         62
       ]
@@ -134,7 +134,7 @@
       "title": "Seating Capacity",
       "description": "The seating passenger capacity of the vehicle (whole number)",
       "default": 0,
-      "exclusiveMinimum": 0,
+      "minimum": 0,
       "examples": [
         43
       ]
@@ -145,7 +145,7 @@
       "title": "Standing Capacity",
       "description": "The standing passenger capacity of the vehicle (whole number)",
       "default": 0,
-      "exclusiveMinimum": 0,
+      "minimum": 0,
       "examples": [
         19
       ]
@@ -251,8 +251,8 @@
       "title": "Year",
       "default": 1900,
       "description": "The model year",
-      "exclusiveMinimum": 1900,
-      "exclusiveMaximum": 2100,
+      "minimum": 1900,
+      "maximum": 2100,
       "examples": [
         2018
       ]

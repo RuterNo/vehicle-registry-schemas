@@ -2,7 +2,7 @@
   "definitions": {},
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "equipment.schema.json",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "type": "object",
   "title": "Equipment",
   "description": "The equipment schema",
@@ -95,11 +95,11 @@
     "SubModules": {
       "$id": "#properties/SubModules",
       "type": "array",
-      "title": "Submodules",
+      "title": "SubModules",
+      "uniqueItems": true,
       "items": {
         "$id": "#properties/SubModules/items",
         "type": "object",
-        "title": "Item",
         "$ref": "equipment.schema.json"
       }
     }

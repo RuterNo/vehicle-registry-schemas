@@ -2,22 +2,27 @@
   "definitions": {},
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "inventory.schema.json",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "type": "object",
   "title": "Inventory",
   "required": [
-    "ID",
+    "VIN",
     "Modules"
   ],
   "additionalProperties": false,
   "properties": {
-    "ID": {
-      "$id": "#/properties/ID",
+    "VIN": {
+      "$id": "#/properties/VIN",
       "type": "string",
-      "title": "Id",
-      "description": "The ID of the corresponding vehicle",
+      "title": "VIN",
+      "description": "The chassis number of the corresponding vehicle",
+      "maxLength": 17,
+      "minLength": 17,
       "examples": [
-        "TODO"
+        "YV3R8N12191134148",
+        "SUU206U11DB012358",
+        "VNESFR1600M006849",
+        "WEB62868713121311"
       ]
     },
     "Modules": {
