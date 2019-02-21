@@ -1,7 +1,6 @@
 {
   "Vehicles": [
     {
-      "UID": "TODO",
       "VIN": "YV3R8N1279A134235",
       "ID": "22011",
       "GatewayIP": "10.0.0.1",
@@ -18,9 +17,10 @@
       "HasLiftOrRamp": false,
       "Manufacturer": "Volvo",
       "Model": "B8L",
-      "Type": "TODO",
-      "TransportType": "TODO",
-      "TypeOfBus": "TODO",
+      "Type": "BI-ARTICULATED",
+      "TransportType": "BUS",
+      "TypeOfBus": "REGIONAL",
+      "FuelType": "DIESEL",
       "Year": 2018,
       "Color": "RAL 1016",
       "EnvironmentClass": "6",
@@ -28,7 +28,6 @@
       "UpdateDate": "2018-11-16T13:14:53.347Z"
     },
     {
-      "UID": "TODO",
       "VIN": "WEB62868713121311",
       "ID": "2007",
       "GatewayIP": "10.0.0.1",
@@ -45,9 +44,9 @@
       "HasLiftOrRamp": false,
       "Manufacturer": "Volvo",
       "Model": "B8L",
-      "Type": "TODO",
-      "TransportType": "TODO",
-      "TypeOfBus": "TODO",
+      "Type": "BI-ARTICULATED",
+      "TransportType": "BUS",
+      "TypeOfBus": "CITY",
       "Year": 2018,
       "Color": "RAL 1016",
       "EnvironmentClass": "6",

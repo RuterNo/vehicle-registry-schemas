@@ -2,7 +2,7 @@
   "definitions": {},
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "vehicle.schema.json",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "type": "object",
   "title": "Vehicle",
   "description": "A vehicle in the vehicle registry",
@@ -25,21 +25,14 @@
     "Model",
     "Type",
     "TransportType",
-    "TypeOfBus",
     "Year",
     "Color",
     "DoorSetup",
     "EnvironmentClass",
     "UpdateDate"
   ],
-  "additionalProperties": false,
+  "additionalProperties": true,
   "properties": {
-    "UID": {
-      "$id": "#/properties/UID",
-      "type": "string",
-      "title": "Unique Identifier",
-      "description": "A globally unique id for this vehicle created by Ruter"
-    },
     "VIN": {
       "$id": "#/properties/VIN",
       "type": "string",
@@ -217,8 +210,10 @@
       "type": "string",
       "title": "Type",
       "description": "The type of the vehicle",
-      "examples": [
-        "TODO"
+      "enum": [
+        "NORMAL",
+        "ARTICULATED",
+        "BI-ARTICULATED"
       ]
     },
     "TransportType": {
@@ -226,23 +221,37 @@
       "type": "string",
       "title": "Transport Type",
       "description": "The type of transport",
-      "examples": [
-        "TODO",
-        "Bus",
-        "Tram",
-        "Metro"
+      "enum": [
+        "AIR",
+        "BUS",
+        "COACH",
+        "FERRY",
+        "METRO",
+        "RAIl",
+        "TRAM"
       ]
     },
     "TypeOfBus": {
       "$id": "#/properties/TypeOfBus",
       "type": "string",
-      "title": "Type Of Bus",
+      "title": "TypeOfBus",
+      "description": "The type of bus",
+      "enum": [
+        "REGIONAL",
+        "CITY"
+      ]
+    },
+    "FuelType": {
+      "$id": "#/properties/FuelType",
+      "type": "string",
+      "title": "FuelType",
       "description": "",
-      "examples": [
-        "TODO",
-        "NE",
-        "BE",
-        "LE"
+      "enum": [
+        "ELECTRIC",
+        "DIESEL",
+        "GASOLINE",
+        "ETHANOL",
+        "GAS"
       ]
     },
     "Year": {

@@ -2,7 +2,7 @@
   "definitions": {},
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "equipment.schema.json",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "type": "object",
   "title": "Equipment",
   "description": "The equipment schema",
@@ -16,7 +16,7 @@
     "Status",
     "UpdateDate"
   ],
-  "additionalProperties": false,
+  "additionalProperties": true,
   "properties": {
     "Type": {
       "$id": "#properties/Type",

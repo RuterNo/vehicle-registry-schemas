@@ -2,14 +2,14 @@
   "definitions": {},
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "inventory.schema.json",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "type": "object",
   "title": "Inventory",
   "required": [
     "VIN",
     "Modules"
   ],
-  "additionalProperties": false,
+  "additionalProperties": true,
   "properties": {
     "VIN": {
       "$id": "#/properties/VIN",
