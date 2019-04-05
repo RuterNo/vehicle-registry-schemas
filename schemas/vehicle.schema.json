@@ -2,7 +2,7 @@
   "definitions": {},
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "vehicle.schema.json",
-  "version": "0.8.3",
+  "version": "0.9.0",
   "type": "object",
   "title": "Vehicle",
   "description": "A vehicle in the vehicle registry",
@@ -19,12 +19,14 @@
     "StandingCapacity",
     "SpecialPlaceCapacity",
     "WheelchairPlaceCapacity",
-    "LowFloor",
     "HasLiftOrRamp",
     "Manufacturer",
     "Model",
-    "Type",
-    "TransportType",
+    "VehicleMode",
+    "VehicleClass",
+    "Size",
+    "Fuel",
+    "Floor",
     "Year",
     "Color",
     "DoorSetup",
@@ -94,7 +96,6 @@
       "title": "Description",
       "description": "A description of the vehicle",
       "examples": [
-        "TODO",
         "Bi-Articulated Bus"
       ]
     },
@@ -165,17 +166,6 @@
         1
       ]
     },
-    "LowFloor": {
-      "$id": "#/properties/LowFloor",
-      "type": "boolean",
-      "title": "Low Floor",
-      "description": "Whether the vehicle has a low floor",
-      "default": false,
-      "examples": [
-        false,
-        true
-      ]
-    },
     "HasLiftOrRamp": {
       "$id": "#/properties/HasLiftOrRamp",
       "type": "boolean",
@@ -205,53 +195,70 @@
         "B8L"
       ]
     },
-    "Type": {
-      "$id": "#/properties/Type",
+    "VehicleMode": {
+      "$id": "#/properties/VehicleMode",
       "type": "string",
-      "title": "Type",
-      "description": "The type of the vehicle",
+      "title": "Vehicle Mode",
+      "description": "The mode of the vehicle",
       "enum": [
-        "NORMAL",
-        "ARTICULATED",
-        "BI-ARTICULATED"
+        "bus",
+        "water",
+        "metro",
+        "tram"
       ]
     },
-    "TransportType": {
-      "$id": "#/properties/TransportType",
-      "type": "string",
-      "title": "Transport Type",
-      "description": "The type of transport",
-      "enum": [
-        "AIR",
-        "BUS",
-        "COACH",
-        "FERRY",
-        "METRO",
-        "RAIl",
-        "TRAM"
-      ]
-    },
-    "TypeOfBus": {
-      "$id": "#/properties/TypeOfBus",
+    "VehicleClass": {
+      "$id": "#/properties/VehicleClass",
       "type": "string",
       "title": "TypeOfBus",
-      "description": "The type of bus",
+      "description": "The class of the vehicle (Bus only)",
       "enum": [
-        "REGIONAL",
-        "CITY"
+        "notApplicable",
+        "classI",
+        "classII",
+        "classIII"
       ]
     },
-    "FuelType": {
-      "$id": "#/properties/FuelType",
+    "Size": {
+      "$id": "#/properties/Size",
       "type": "string",
-      "title": "FuelType",
-      "description": "",
+      "title": "Size",
+      "description": "The size of the vehicle (Bus only)",
       "enum": [
-        "ELECTRIC",
-        "DIESEL",
-        "GASOLINE",
-        "ETHANOL",
-        "GAS"
+        "notApplicable",
+        "midi",
+        "normal",
+        "triAxle",
+        "articulated"
+      ]
+    },
+    "Fuel": {
+      "$id": "#/properties/Fuel",
+      "type": "string",
+      "title": "Fuel",
+      "description": "What fuel the vehicle uses.",
+      "enum": [
+        "electric",
+        "hydrogen",
+        "biogas",
+        "hvo",
+        "biogasBiodieselHybrid",
+        "bioethanol",
+        "biodiesel",
+        "diesel",
+        "dieselHybrid",
+        "gasoline"
+      ]
+    },
+    "Floor": {
+      "$id": "#/properties/Floor",
+      "type": "string",
+      "title": "Fuel",
+      "description": "What kind of floor the vehicle has.",
+      "enum": [
+        "normal",
+        "lowEntry",
+        "lowFloor"
       ]
     },
     "Year": {
