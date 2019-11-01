@@ -1,7 +1,9 @@
 package no.ruter.taas.ver.validation;
 
+import static no.ruter.taas.ver.validation.DefaultValidationConfig.EQUIPMENT_LIST_SCHEMA_LOCATION;
 import static no.ruter.taas.ver.validation.DefaultValidationConfig.EQUIPMENT_SCHEMA_LOCATION;
 import static no.ruter.taas.ver.validation.DefaultValidationConfig.EXAMPLES_PATH;
+import static no.ruter.taas.ver.validation.DefaultValidationConfig.INVENTORY_LIST_SCHEMA_LOCATION;
 import static no.ruter.taas.ver.validation.DefaultValidationConfig.INVENTORY_SCHEMA_LOCATION;
 import static no.ruter.taas.ver.validation.DefaultValidationConfig.VEHICLE_EXAMPLE;
 import static no.ruter.taas.ver.validation.DefaultValidationConfig.VEHICLE_LIST_SCHEMA_LOCATION;
@@ -17,14 +19,9 @@ import org.junit.Test;
 
 public class ValidationTest {
 
-//  private String resolutionScope = RESOLUTION_SCOPE_GITHUB;
-//  private boolean local = false;
-
   @BeforeClass
   public static void setUp() {
     System.out.println("Working Directory = " + System.getProperty("user.dir"));
-
-
   }
 
   @Test
@@ -57,11 +54,31 @@ public class ValidationTest {
   }
 
   @Test
+  public void validateInventoryList() throws IOException, URISyntaxException {
+    System.out.println("Initialising validator using schema: " + INVENTORY_LIST_SCHEMA_LOCATION);
+    JsonSchemaValidator validator = new JsonSchemaValidator(INVENTORY_LIST_SCHEMA_LOCATION);
+
+    String jsonLocation = EXAMPLES_PATH + "/inventory_list.json";
+    System.out.println("Validating json data: " + jsonLocation);
+    validator.validate(getJsonObject(jsonLocation));
+  }
+
+  @Test
   public void validateEquipment() throws IOException, URISyntaxException {
     System.out.println("Initialising validator using schema: " + EQUIPMENT_SCHEMA_LOCATION);
     JsonSchemaValidator validator = new JsonSchemaValidator(EQUIPMENT_SCHEMA_LOCATION);
 
     String jsonLocation = EXAMPLES_PATH + "/equipment.json";
+    System.out.println("Validating json data: " + jsonLocation);
+    validator.validate(getJsonObject(jsonLocation));
+  }
+
+  @Test
+  public void validateEquipmentList() throws IOException, URISyntaxException {
+    System.out.println("Initialising validator using schema: " + EQUIPMENT_LIST_SCHEMA_LOCATION);
+    JsonSchemaValidator validator = new JsonSchemaValidator(EQUIPMENT_LIST_SCHEMA_LOCATION);
+
+    String jsonLocation = EXAMPLES_PATH + "/equipment_list.json";
     System.out.println("Validating json data: " + jsonLocation);
     validator.validate(getJsonObject(jsonLocation));
   }

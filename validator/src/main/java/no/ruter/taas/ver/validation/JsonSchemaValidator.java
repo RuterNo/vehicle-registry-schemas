@@ -1,7 +1,11 @@
 package no.ruter.taas.ver.validation;
 
+import static no.ruter.taas.ver.validation.DefaultValidationConfig.EQUIPMENT_LIST_SCHEMA;
+import static no.ruter.taas.ver.validation.DefaultValidationConfig.EQUIPMENT_LIST_SCHEMA_LOCATION;
 import static no.ruter.taas.ver.validation.DefaultValidationConfig.EQUIPMENT_SCHEMA;
 import static no.ruter.taas.ver.validation.DefaultValidationConfig.EQUIPMENT_SCHEMA_LOCATION;
+import static no.ruter.taas.ver.validation.DefaultValidationConfig.INVENTORY_LIST_SCHEMA;
+import static no.ruter.taas.ver.validation.DefaultValidationConfig.INVENTORY_LIST_SCHEMA_LOCATION;
 import static no.ruter.taas.ver.validation.DefaultValidationConfig.INVENTORY_SCHEMA;
 import static no.ruter.taas.ver.validation.DefaultValidationConfig.INVENTORY_SCHEMA_LOCATION;
 import static no.ruter.taas.ver.validation.DefaultValidationConfig.VEHICLE_LIST_SCHEMA;
@@ -70,14 +74,18 @@ class JsonSchemaValidator {
       JSONObject rawSchema = getJsonObject(jsonSchemaLocation);
       JSONObject rawVehicleSchema = getJsonObject(VEHICLE_SCHEMA_LOCATION);
       JSONObject rawVehicleListSchema = getJsonObject(VEHICLE_LIST_SCHEMA_LOCATION);
-      JSONObject rawEquipmentSchemaSchema = getJsonObject(EQUIPMENT_SCHEMA_LOCATION);
+      JSONObject rawEquipmentSchema = getJsonObject(EQUIPMENT_SCHEMA_LOCATION);
+      JSONObject rawEquipmentListSchema = getJsonObject(EQUIPMENT_LIST_SCHEMA_LOCATION);
       JSONObject rawInventorySchema = getJsonObject(INVENTORY_SCHEMA_LOCATION);
+      JSONObject rawInventoryListSchema = getJsonObject(INVENTORY_LIST_SCHEMA_LOCATION);
 
       this.schemaLoader = SchemaLoader.builder()
           .registerSchemaByURI(new URI(VEHICLE_SCHEMA), rawVehicleSchema)
           .registerSchemaByURI(new URI(VEHICLE_LIST_SCHEMA), rawVehicleListSchema)
-          .registerSchemaByURI(new URI(EQUIPMENT_SCHEMA), rawEquipmentSchemaSchema)
+          .registerSchemaByURI(new URI(EQUIPMENT_SCHEMA), rawEquipmentSchema)
+          .registerSchemaByURI(new URI(EQUIPMENT_LIST_SCHEMA), rawEquipmentListSchema)
           .registerSchemaByURI(new URI(INVENTORY_SCHEMA), rawInventorySchema)
+          .registerSchemaByURI(new URI(INVENTORY_LIST_SCHEMA), rawInventoryListSchema)
           .schemaJson(rawSchema)
           .draftV7Support()
           .build();

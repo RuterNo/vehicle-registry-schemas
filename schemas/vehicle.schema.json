@@ -2,7 +2,7 @@
   "definitions": {},
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "vehicle.schema.json",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "type": "object",
   "title": "Vehicle",
   "description": "A vehicle in the vehicle registry",
@@ -38,8 +38,8 @@
     "VIN": {
       "$id": "#/properties/VIN",
       "type": "string",
-      "title": "Chassis Number",
-      "description": "The chassis number of the vehicle",
+      "title": "Vehicle identification number",
+      "description": "The Vehicle identification number (VIN) of the vehicle as defined by ISO 3779 and ISO 4030",
       "maxLength": 17,
       "minLength": 17,
       "examples": [
@@ -53,7 +53,7 @@
       "$id": "#/properties/ID",
       "type": "string",
       "title": "Identifier",
-      "description": "The operator's internal identifier",
+      "description": "The vehicle identifier used by SIS",
       "examples": [
         "22011"
       ]
@@ -83,7 +83,7 @@
       "$id": "#/properties/Prefix",
       "type": "integer",
       "title": "Prefix",
-      "description": "TODO: The depot number?",
+      "description": "The depot number",
       "default": 0,
       "minimum": 0,
       "examples": [

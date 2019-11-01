@@ -18,7 +18,7 @@ The schemas provided in this repository define Vehicle, Equipment and Inventory 
    * _/vehicles/{VIN}/inventory?type={type}_
    * _/vehicles/{VIN}/inventory?status={code}&type={type}_
  * _/inventory_ - (Opt. filter by: __status__, __type__)
-   * Returns a list of all known modules and submodules
+   * Returns an object like _examples/inventory_list.json_
    * _/inventory?status={code}_
    * _/inventory?type={type}_
    * _/inventory?status={code}&type={type}_
@@ -29,12 +29,3 @@ The schemas provided in this repository define Vehicle, Equipment and Inventory 
 The schemas are subject to change.
 
 Fields may be added or removed, decided by Ruter and the Operators's needs.
-
-#### Elements not yet finalized:
-
-##### Vehicle schema
-  * Prefix
-  * Description
-  * Type
-  * TransportType
-  * TypeOfBus
