@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "inventory_list.schema.json",
+  "version": "0.9.1",
+  "title": "Inventory List",
+  "description": "A list of the vehicle inventories in this database",
+  "required": [
+    "Inventories"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "Inventories": {
+      "$id": "#/properties/Inventories",
+      "type": "array",
+      "title": "Inventories",
+      "description": "A list of inventories as defined by the inventory schema",
+      "uniqueItems": true,
+      "items": {
+        "$id": "#/properties/Inventories/items",
+        "type": "object",
+        "$ref": "inventory.schema.json"
+      }
+    },
+    "NumberOfInventories": {
+      "$id": "#/properties/NumberOfInventories",
+      "type": "integer",
+      "title": "NumberOfInventories",
+      "description": "The number of inventories in the list",
+      "default": 0,
+      "minimum": 0
+    }
+  }
+}

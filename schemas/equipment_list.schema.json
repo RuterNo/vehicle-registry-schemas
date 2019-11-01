@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "equipment_list.schema.json",
+  "version": "0.9.1",
+  "title": "Equipment List",
+  "description": "A list of the equipments in this database",
+  "required": [
+    "Equipments"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "Equipments": {
+      "$id": "#/properties/Equipments",
+      "type": "array",
+      "title": "Equipments",
+      "description": "A list of equipments as defined by the equipment schema",
+      "uniqueItems": true,
+      "items": {
+        "$id": "#/properties/Equipments/items",
+        "type": "object",
+        "$ref": "equipment.schema.json"
+      }
+    },
+    "NumberOfEquipments": {
+      "$id": "#/properties/NumberOfEquipments",
+      "type": "integer",
+      "title": "NumberOfEquipments",
+      "description": "The number of equipments in the list",
+      "default": 0,
+      "minimum": 0
+    }
+  }
+}
